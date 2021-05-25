@@ -1,0 +1,144 @@
+/* This is a mobile-first layout! */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Shadows+Into+Light&display=swap');
+
+* { /* all */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  font-size: 14px;
+  /* border: 1px solid white; */
+}
+body {
+  height: 100%;
+  background-color: #333;
+  /* background: linear-gradient(#333, #000); */
+  color: white;
+  font-family: 'Lato', sans-serif;
+}
+#wrapper {
+    max-width: 100%;
+    margin: auto;
+    min-width: 350px;
+  }
+.button {
+  border-radius: 10px;
+  color: #aaa;
+  width: 150px;
+  padding: 15px 0px;
+  margin: 5px;
+  border: 2px solid #b44;
+  background-color: #121212;
+}
+#button_tray {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.clicked { /* button in clicked state */
+  border: 2px solid white;
+  color: white;
+}
+.crossed { /* evidence that's been matched */
+  text-decoration: line-through;
+  color: #888;
+}
+#header {
+  padding: 10px 0;
+}
+#display {
+  padding-bottom: 50px;
+}
+.ghost {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#placeholder { /* shows when no ghost results */
+  display: none;
+  padding-bottom: 5px;
+}
+#placeholder, #results, #footer, #message, a {
+  color: #888;
+}
+#results {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.ghost, #results, #placeholder { /* red line between entries */
+  border-bottom: 2px solid #b44;
+}
+/* .ghost div {
+  border: 1px solid white;
+} */
+.evidence1, .evidence2, .evidence3 {
+     line-height: 45px;
+}
+.name, #header h1, #placeholder {
+  font-size: 2em;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bold;
+  /* font-family: 'Liu Jian Mao Cao', cursive; */
+}
+.evidence1, .evidence2, .evidence3 {
+    line-height: 30px; /* how tall cell is */
+    border-top: 1px solid #555;
+}
+#footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*            RESPONSIVE DESIGN
+*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Larger phones & tablets */
+@media only screen and (min-width: 600px) {
+  #button_tray {
+    max-width: 70%;
+  }
+  .button {
+    padding: 20px;
+  }
+}
+
+/* Laptops, desktops, etc*/
+@media only screen and (min-width: 992px) {
+  * {
+    font-size: 18px;
+  }
+  body {
+    max-width: 70%;
+  }
+  .ghost {
+    flex-wrap: nowrap;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    /* border: 1px solid white; */
+  }
+  .ghost div {
+    width: 200px;
+    text-align: left;
+    /* border: 1px solid white; */
+  }
+  .name, #header h1 {
+    font-size: 2em;
+  }
+  .name {
+    margin: 0;
+  }
+  .evidence1, .evidence2, .evidence3 {
+    margin: 0;
+    border: none;
+    line-height: normal;
+    padding-top: 24px;
+  }
+  #placeholder {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+} 
+
