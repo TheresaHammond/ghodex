@@ -1,7 +1,8 @@
 <!--
     Ghodex: A Phasmophobia Fanmade Journal App
-    Ver 1.0
+    Ver 2.0
     by Studio Searose
+    index.html
 -->
 
 <!DOCTYPE html>
@@ -14,6 +15,10 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        
+        <div id="btnScroll">
+            <!-- <img src="images/arrow_up.png"> -->
+        </div>
 
       <div id="wrapper">
 
@@ -22,27 +27,51 @@
       </div>
 
       <div id="button_tray">
-        <div class="button" id="EMF Level 5">
+        <div class="button" id="emf5">
+            <figure>
+                <img src="images/crossout.png">
+                <figcaption>EMF Level 5</figcaption>
+            </figure> 
           <p>EMF Level 5</p>
         </div>
 
-        <div class="button" id="Ghost Orb">
+        <div class="button" id="ghostOrb">
+            <figure>
+                <img src="images/crossout.png">
+                <figcaption>Ghost Orb</figcaption>
+            </figure>
           <p>Ghost Orb</p>
         </div>
 
-        <div class="button" id="Ghost Writing">
+        <div class="button" id="ghostWriting">
+            <figure>
+                <img src="images/crossout.png">
+                <figcaption>Ghost Writing</figcaption>
+            </figure>
           <p>Ghost Writing</p>
         </div>
 
-        <div class="button" id="Fingerprints">
+        <div class="button" id="fingerprints">
+            <figure>
+                <img src="images/crossout.png">
+                <figcaption>Fingerprints</figcaption>
+            </figure>
           <p>Fingerprints</p>
         </div>
 
-        <div class="button" id="Freezing Temps">
+        <div class="button" id="freezingTemps">
+            <figure>
+                <img src="images/crossout.png">
+                <figcaption>Freezing Temps</figcaption>
+            </figure>
           <p>Freezing Temps</p>
         </div>
 
-      <div class="button" id="Spirit Box">
+      <div class="button" id="spiritBox">
+          <figure>
+                <img src="images/crossout.png">
+              <figcaption>Spirit Box</figcaption>
+          </figure>
         <p>Spirit Box</p>
       </div>
 
@@ -51,6 +80,7 @@
     <div id="display">
       <div id="results">
         Results: <span>0</span>
+          <p>Click a ghost's name for more information.</p>
       </div>
 
       <div id="ghostlist">
@@ -59,72 +89,180 @@
         <div class="evidence1 evidence">1</div>
         <div class="evidence2 evidence">2</div>
         <div class="evidence3 evidence">3</div>
+          <div class="description">
+            Strengths:
+            <br>
+            <span class="strength"></span>
+            <br>
+            Weaknesses:
+            <br>
+            <span class="weakness"></span>
+          </div>
       </div>
       <div class="ghost" id="banshee">
         <div class="name">Unknown</div>
         <div class="evidence1 evidence">1</div>
         <div class="evidence2 evidence">2</div>
         <div class="evidence3 evidence">3</div>
+          <div class="description">
+            Strengths:
+            <br>
+            <span class="strength"></span>
+            <br>
+            Weaknesses:
+            <br>
+            <span class="weakness"></span>
+          </div>
       </div>
       <div class="ghost" id="revenant">
         <div class="name">Unknown</div>
         <div class="evidence1 evidence">1</div>
         <div class="evidence2 evidence">2</div>
         <div class="evidence3 evidence">3</div>
+          <div class="description">
+            Strengths:
+            <br>
+            <span class="strength"></span>
+            <br>
+            Weaknesses:
+            <br>
+            <span class="weakness"></span>
+          </div>
       </div>
       <div class="ghost" id="oni">
         <div class="name">Unknown</div>
         <div class="evidence1 evidence">1</div>         
         <div class="evidence2 evidence">2</div>
         <div class="evidence3 evidence">3</div>
+          <div class="description">
+            Strengths:
+            <br>
+            <span class="strength"></span>
+            <br>
+            Weaknesses:
+            <br>
+            <span class="weakness"></span>
+          </div>
       </div>
       <div class="ghost" id="mare">
         <div class="name">Unknown</div>
         <div class="evidence1 evidence">1</div>
         <div class="evidence2 evidence">2</div>
         <div class="evidence3 evidence">3</div>
+          <div class="description">
+            Strengths:
+            <br>
+            <span class="strength"></span>
+            <br>
+            Weaknesses:
+            <br>
+            <span class="weakness"></span>
+          </div>
       </div>
       <div class="ghost" id="yurei">
         <div class="name">Unknown</div>
         <div class="evidence1 evidence">1</div>
         <div class="evidence2 evidence">2</div>
         <div class="evidence3 evidence">3</div>
+          <div class="description">
+            Strengths:
+            <br>
+            <span class="strength"></span>
+            <br>
+            Weaknesses:
+            <br>
+            <span class="weakness"></span>
+          </div>
       </div>
       <div class="ghost" id="wraith">
         <div class="name">Unknown</div>
         <div class="evidence1 evidence">1</div>
         <div class="evidence2 evidence">2</div>
         <div class="evidence3 evidence">3</div>
+          <div class="description">
+            Strengths:
+            <br>
+            <span class="strength"></span>
+            <br>
+            Weaknesses:
+            <br>
+            <span class="weakness"></span>
+          </div>
       </div>
       <div class="ghost" id="jinn">
         <div class="name">Unknown</div>
         <div class="evidence1 evidence">1</div>
         <div class="evidence2 evidence">2</div>
         <div class="evidence3 evidence">3</div>
+          <div class="description">
+            Strengths:
+            <br>
+            <span class="strength"></span>
+            <br>
+            Weaknesses:
+            <br>
+            <span class="weakness"></span>
+          </div>
       </div>
       <div class="ghost" id="phantom">
         <div class="name">Unknown</div>
         <div class="evidence1 evidence">1</div>
         <div class="evidence2 evidence">2</div>
         <div class="evidence3 evidence">3</div>
+          <div class="description">
+            Strengths:
+            <br>
+            <span class="strength"></span>
+            <br>
+            Weaknesses:
+            <br>
+            <span class="weakness"></span>
+          </div>
       </div>
       <div class="ghost" id="polt">
         <div class="name">Unknown</div>
         <div class="evidence1 evidence">1</div>
         <div class="evidence2 evidence">2</div>
         <div class="evidence3 evidence">3</div>
+          <div class="description">
+            Strengths:
+            <br>
+            <span class="strength"></span>
+            <br>
+            Weaknesses:
+            <br>
+            <span class="weakness"></span>
+          </div>
       </div>
       <div class="ghost" id="shade">
         <div class="name">Unknown</div>
         <div class="evidence1 evidence">1</div>
         <div class="evidence2 evidence">2</div>
         <div class="evidence3 evidence">3</div>
+          <div class="description">
+            Strengths:
+            <br>
+            <span class="strength"></span>
+            <br>
+            Weaknesses:
+            <br>
+            <span class="weakness"></span>
+          </div>
       </div>
       <div class="ghost" id="spirit">
         <div class="name">Unknown</div>
         <div class="evidence1 evidence">1</div>
         <div class="evidence2 evidence">2</div>
         <div class="evidence3 evidence">3</div>
+          <div class="description">
+            Strengths:
+            <br>
+            <span class="strength"></span>
+            <br>
+            Weaknesses:
+            <br>
+            <span class="weakness"></span>
+          </div>
       </div>
       </div>
 
@@ -134,13 +272,43 @@
 
     </div>
 
-    <!-- <div id="footer">
-      Made by a <a href="https://codepen.io/voidfishy">ghost</a>.
-    </div> -->
+    <footer>
+      Made by a <a href="https://codepen.io/seerosenblatt" target="_blank">ghost</a>.
+        <br>
+        <div id="attLink">Attributions</div>
+        <div id="attributions">
+            Artwork:
+            <br>
+            <a href="https://www.vecteezy.com/vector-art/144417-tel-communication-vector" target="_blank">Ery Prihananto</a>
+            <br>
+            <a href="https://www.vecteezy.com/vector-art/421882-vector-magnet-icon" target="_blank">Iyi Kon</a>
+            <br>
+            <a href="https://www.vecteezy.com/vector-art/141691-free-photography-and-camera-icons-vector" target="_blank">xiayamoon</a>
+            <br>
+            <a href="https://www.vecteezy.com/vector-art/165277-book-icon-set" target="_blank">jellyfishwater</a>
+            <br>
+            <a href="https://www.vecteezy.com/vector-art/1225228-bloody-spray-and-handprints" target="_blank">Oleksii Bezrodnii</a>
+            <br>
+            <a href="https://www.vecteezy.com/vector-art/550915-snowflake-vector-icon" target="_blank">goff.brian</a>
+            <br>
+            <a href="https://www.vecteezy.com/vector-art/2290617-hand-drawn-arrowheads-directional-and-orientational-doodle-vector-illustration" target="_blank">ghanta.poorna.4049121761</a>
+            <br>
+            <a href="https://www.vecteezy.com/vector-art/2406246-hand-drawn-circle-line-sketch-vector-set-circular-scribble-doodle-round-design" target="_blank">Buntoon Rodseng</a>
+            <br>
+            <a href="https://www.vecteezy.com/vector-art/108412-hand-drawn-scribble-border-set" target="_blank">carterart</a>
+            <br>
+            <br>
+            <a href="https://store.steampowered.com/app/739630/Phasmophobia/" target="_blank"> Phasmophobia on Steam</a>
+            <br>
+            <a href="https://phasmophobia.fandom.com/wiki/Main_Page" target="_blank">Phasmophobia Wiki</a>
+            <br>
+            <a href="https://github.com/seerosenblatt/ghodex" target="_blank">Ghodex on Github</a> 
+        </div>
+    </footer>
 
       </div>    
 
-        <script src="jquery-3.6.0.js"></script>
+        <script src="jquery-3.6.0.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
