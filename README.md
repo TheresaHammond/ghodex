@@ -1,5 +1,6 @@
 # ghodex
 A fanmade Phasmophobia companion app.
+
 Author: Theresa Hammond
 Version: 2.0.0
 
