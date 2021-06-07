@@ -5,7 +5,8 @@ Author: Theresa Hammond
 
 Version: 2.0.0
 
-This app is meant as a companion to Phasmophobia, a PC game now available on Steam. 
+This app is meant as a companion to Phasmophobia, a PC game now available on Steam.
+
 GAME LINK: https://store.steampowered.com/app/739630/Phasmophobia/
 
 HOW TO USE:
