@@ -2,6 +2,7 @@
 A fanmade Phasmophobia companion app.
 
 Author: Theresa Hammond
+
 Version: 2.0.0
 
 This app is meant as a companion to Phasmophobia, a PC game now available on Steam. 
