@@ -123,8 +123,8 @@ var yokai = {
   id: "#yokai",
   name: "Yokai",
   evidence: ["Spirit Box", "Ghost Orb", "Ghost Writing"],
-    strength: "",
-    weakness: "",
+    strength: "Talking near a Yokai will anger it and cause it to attack more often.",
+    weakness: "While hunting, it can only hear voices close to it.",
   matches: 0
 }
 
@@ -132,13 +132,13 @@ var hantu = {
   id: "#hantu",
   name: "Hantu",
   evidence: ["Ghost Orb", "Fingerprints", "Ghost Writing"],
-    strength: "",
-    weakness: "",
+    strength: "A Hantu moves faster in colder areas.",
+    weakness: "A Hantu moves slower in warmer areas.",
   matches: 0
 }
 
 // create array of ghosts!
-var ghosts = [banshee, demon, jinn, mare, oni, phantom, polt, revenant, shade, spirit, wraith, yurei];
+var ghosts = [banshee, demon, jinn, mare, oni, phantom, polt, revenant, shade, spirit, wraith, yurei, yokai, hantu];
 
 
 // DEFINE FUNCTIONS
