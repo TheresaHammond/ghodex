@@ -1,3 +1,10 @@
+/* 
+	Ghodex: A Phasmophobia Fanmade Journal App
+    Ver 2.1.1
+    by Studio Searose
+	script.js
+*/
+
 // uses jQuery!
 
 "use strict"; 
@@ -8,6 +15,9 @@ var selection = []; // evidence clicked
 var pos; // var for deletion position
 var results = 0; // no. of ghosts shown
 var time = 150; // fade animation time
+
+// GET ELEMENTS
+var wrapper = document.getElementById("wrapper");
 
 // define ghost objects (descriptions from the phasmophobia wiki)
 var demon = {
@@ -295,34 +305,33 @@ function cross_off(ghost) {
 function transitionAnim() {
     $("#ghostlist").fadeOut(time, search).fadeIn(function() {
         if ($("#results").find("span").text() == "1") {
-            window.scroll(0, 9999); // scroll to bottom if only one ghost
+            wrapper.scroll(0, 9999); // scroll to bottom if only one ghost
         }
     }); 
 }
 
 // if scrolled down and btnScroll not already displayed, show it
-function showScrollTop() {
+function showScrollBtn() {
     var style = getComputedStyle(document.getElementById("btnScroll"));
-    if (window.scrollY >= 200) {
+    if (wrapper.scrollTop >= 200) {
         if (style.display == "none") {
             $("#btnScroll").fadeIn(time);
         }
     } else if (style.display != "none") {
         $("#btnScroll").fadeOut(time);
-    }
+    } 
 }
 
-// expand description of selected ghost
+// expand description of selected ghost (event called on "name")
 function expandDesc(event) {
     // if description is not expanded, expand and scroll page to it
     // else if description is already open, simply close it
     var display = $(this).parent().children(".description").css("display");
     if (display == "none") {
         $(this).parent().children(".description").slideDown(function() {
-            // scroll name to center of page (if possible)
-            var offset = $(this).parent().offset();
-            var center = window.innerHeight / 4; // quarter window height
-            window.scroll(0, offset.top - center);
+            // centers the top of the "description" element on screen
+            var scrollTarget = event.target.parentElement.children[4];
+            scrollTarget.scrollIntoView({block: "center"});
         })
     } else {
         $(this).parent().children(".description").slideUp();
@@ -332,7 +341,7 @@ function expandDesc(event) {
 // MAIN FUNCTION
 // runs when window is done loading!
 $( document ).ready(function() {
-    
+
     // make all buttons available at start (unavailable ones are not clickable)
     $(".button").each(function() {
         $(this).addClass("available");
@@ -340,14 +349,19 @@ $( document ).ready(function() {
     
     // SET EVENT LISTENERS
     // scroll to top button function
-    $("#btnScroll").click(function() { window.scrollTo(0,0); });
+    $("#btnScroll").click(function() { 
+        wrapper.scrollTo(0,0); 
+    });
     
-    // show Scroll To Top button on scrolldown
-    window.addEventListener("scroll", showScrollTop);
+    // show Scroll To Top button when element is scrolled down far enough
+    // window.addEventListener("scroll", showScrollBtn);
+    wrapper.addEventListener("scroll", showScrollBtn);
     
-    $("#attLink").click(function() {
+    // show/hide attributions (commented out bc want to always show)
+    $(".attClick").click(function() {        
         $("#attributions").slideToggle(function() {
-            window.scroll(0, 9999); // force it to go all the way to the bottom lol
+            // force scroll to go all the way to the bottom lol
+            wrapper.scroll(0, 9999); 
         });
     })
     
@@ -406,7 +420,6 @@ $( document ).ready(function() {
                 $(this).find("img").animate({
                     opacity: 0
                 }, time);
-                // $(this).find("img").fadeOut(time);
 
               // remove evidence from selection
               pos = selection.indexOf($(this).find("p").text());
@@ -424,7 +437,6 @@ $( document ).ready(function() {
                 $(this).find("img").animate({
                     opacity: 1
                 }, time);
-                //$(this).find("img").fadeIn(time);
 
               // add evidence to selection
               selection.push($(this).find("p").text());
