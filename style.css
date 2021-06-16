@@ -1,3 +1,10 @@
+/*
+	Ghodex: A Phasmophobia Fanmade Journal App
+    Ver 2.1.1
+    by Studio Searose
+	style.css
+*/
+
 /* This is a mobile-first layout! */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Shadows+Into+Light&display=swap');
@@ -13,26 +20,31 @@
 }
 
 html {
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+	background-color: #f0e4b0;
+    overflow-x: hidden; /* hide horizontal scrollbar */
 }
 
 body {
-    overflow-x: hidden; /* hide horizontal scrollbar */
-    height: 100%;
     background-image: url(images/oldpaper_small.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
-    color: white;
     font-family: 'Lato', sans-serif;
+    position: fixed;
 }
 
+html, body, #wrapper {
+    height: 100vh;
+}
+
+/* html/body are fixed so that bg doesn't pop w/ address bar */
+/* however, this element still scrolls! */
 #wrapper {
     max-width: 100%;
     margin: auto;
     min-width: 350px;
+    overflow: auto;
+    scroll-behavior: smooth;
 }
 
 .button {
@@ -171,7 +183,7 @@ figcaption {
     padding-bottom: 10px;
 }
 
- footer, footer a, #results span {
+#results span {
     display: inline;
     font-weight: bold;
 }
@@ -180,9 +192,10 @@ figcaption {
     padding-top: 5px;
 }
 
-footer {
+#footer {
   font-size: 1.1em;
   padding-bottom: 20px;
+    font-weight: bold;
 }
 
 #btnScroll {
@@ -212,15 +225,21 @@ footer {
 
 #attLink { /* clickable to open attribute div */
     text-decoration: underline;
-    margin-bottom: 20px;
 }
 
 #attributions {
-    border-top: 4px solid #111;
+    /* border-top: 4px solid #111; */
     border-bottom: 4px solid #111;
-    padding: 10px 0;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     display: none;
+}
+
+#attributions span {
+    text-decoration: underline;
+}
+
+#footer {
+    margin-bottom: 40px;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
