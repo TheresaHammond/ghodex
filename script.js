@@ -1,8 +1,8 @@
-/* 
-	Ghodex: A Phasmophobia Fanmade Journal App
-    Ver 2.1.1
+/*
+    Ghodex: A Phasmophobia Fanmade Journal App
+    Ver 2.1.2
     by Studio Searose
-	script.js
+    script.js
 */
 
 // uses jQuery!
@@ -14,12 +14,12 @@ var click_count = 0; // buttons selected
 var selection = []; // evidence clicked
 var pos; // var for deletion position
 var results = 0; // no. of ghosts shown
-var time = 150; // fade animation time
+var time = 100; // fade animation time
 
 // GET ELEMENTS
 var wrapper = document.getElementById("wrapper");
 
-// define ghost objects (descriptions from the phasmophobia wiki)
+// DEFINE GHOST OBJECTS (descriptions from the phasmophobia wiki)
 var demon = {
   id: "#demon",
   name: "Demon",
@@ -245,6 +245,8 @@ function search() {
   } else if (results < 1) {
     // if no ghosts, but at least one button clicked, show placeholder only
     $("#placeholder").fadeIn(time);
+      $(".description").show();
+      wrapper.scroll(0, 9999); // scroll to bottom
   } 
     
     // if only one ghost is shown in results, circle that specific ghost's name,
@@ -303,6 +305,8 @@ function cross_off(ghost) {
 
 // hide ghost list and perform search, then show again
 function transitionAnim() {
+    /* TODO: This is where I want enableButtons() to fire */
+    
     $("#ghostlist").fadeOut(time, search).fadeIn(function() {
         if ($("#results").find("span").text() == "1") {
             wrapper.scroll(0, 9999); // scroll to bottom if only one ghost
@@ -334,7 +338,9 @@ function expandDesc(event) {
             scrollTarget.scrollIntoView({block: "center"});
         })
     } else {
-        $(this).parent().children(".description").slideUp();
+        if ($(this).parent().attr("id") != "placeholder") { // don't allow placeholder desc to be minimized
+            $(this).parent().children(".description").slideUp();
+        }
     }
 }
 
@@ -447,3 +453,8 @@ $( document ).ready(function() {
         }
    });
 });
+
+/* 
+    TODO: enableButtons() is too slow and enables weird/simultaneous input on mobile.
+    Need to find a way to get it to activate simultaneously with crossoff/before search.
+*/
