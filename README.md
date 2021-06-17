@@ -5,6 +5,8 @@ Author: Studio Searose
 
 Version: 2.1.3
 
+LIVE SITE: https://studiosearose.com/ghodex/
+
 This app is meant as a companion to Phasmophobia, a PC game now available on Steam.
 
 GAME LINK: https://store.steampowered.com/app/739630/Phasmophobia/
