@@ -20,7 +20,7 @@
 
 html {
 	background-color: black;
-    background-image: linear-gradient(black, #420d0e);
+    background-image: linear-gradient(black, #006808);
     overflow-x: hidden; /* hide horizontal scrollbar */
 }
 
@@ -265,7 +265,7 @@ figcaption {
 /* Laptops, desktops, larger tablets, etc*/
 @media only screen and (min-width: 992px) {
     body {
-        background-image: url(images/bg_lg2.jpg);
+        background-image: url(images/bg_lg_expo.jpg);
         margin: auto;
     }
     
