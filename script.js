@@ -1,6 +1,6 @@
 /*
     Ghodex: A Phasmophobia Fanmade Journal App
-    Ver 2.1.3
+    Ver 3.0.0
     by Studio Searose
     script.js
 */
@@ -19,11 +19,15 @@ var time = 100; // fade animation time
 // GET ELEMENTS
 var wrapper = document.getElementById("wrapper");
 
+// EVIDENCE LIST
+var evidence = ["EMF Level 5", "Ghost Orb", "Ghost Writing",                             "Fingerprints", "Spirit Box", "Freezing Temps",
+                "D.O.T.S. Projector"];
+
 // DEFINE GHOST OBJECTS (descriptions from the phasmophobia wiki)
 var demon = {
   id: "#demon",
   name: "Demon",
-  evidence: ["Freezing Temps", "Ghost Writing", "Spirit Box"],
+  evidence: [evidence[3], evidence[2], evidence[5]],
     strength: "Demons are the most aggressive ghosts and will begin Hunts more often.",
     weakness: "Asking a Demon successful questions on the Ouija Board won't lower the user's sanity.",
   matches: 0
@@ -32,7 +36,7 @@ var demon = {
 var banshee = {
   id: "#banshee",
   name: "Banshee",
-  evidence: ["EMF Level 5", "Fingerprints", "Freezing Temps"],
+  evidence: [evidence[3], evidence[1], evidence[6]],
     strength: "A Banshee will focus on one player at a time until it kills them or the player leaves the game.",
     weakness: "Banshees fear the Crucifix, which boosts the Hunt-stopping range of one from 3 meters to 5 meters against it.",
   matches: 0
@@ -41,7 +45,7 @@ var banshee = {
 var revenant = {
   id: "#revenant",
   name: "Revenant",
-  evidence: ["EMF Level 5", "Fingerprints", "Ghost Writing"],
+  evidence: [evidence[1], evidence[2], evidence[5]],
     strength: "A Revenant will travel at a significantly faster (2x) speed when hunting a victim. Additionally, the Revenant can freely switch whoever it is targeting during a Hunt.",
     weakness: "Hiding from the Revenant will cause it to move at a significantly reduced (0.5x) speed.",
   matches: 0
@@ -50,7 +54,7 @@ var revenant = {
 var oni = {
   id: "#oni",
   name: "Oni",
-  evidence: ["EMF Level 5", "Ghost Writing", "Spirit Box"],
+  evidence: [evidence[0], evidence[5], evidence[6]],
     strength: "Oni are more active when people are nearby and have been seen moving objects at great speed.",
     weakness: "Being more active will make the Oni easier to find and identify.",
   matches: 0
@@ -59,7 +63,7 @@ var oni = {
 var mare = {
   id: "#mare",
   name: "Mare",
-  evidence: ["Ghost Orb", "Freezing Temps", "Spirit Box"],
+  evidence: [evidence[4], evidence[1], evidence[2]],
     strength: "Increased chance to attack in the dark. As such, it will do what it can to achieve this, such as turning off lights and tripping the fuse box.",
     weakness: "Turning the lights on will lower its chance to attack.",
   matches: 0
@@ -68,7 +72,7 @@ var mare = {
 var yurei = {
   id: "#yurei",
   name: "Yurei",
-  evidence: ["Ghost Orb", "Freezing Temps", "Ghost Writing"],
+  evidence: [evidence[1], evidence[5], evidence[6]],
     strength: "Yurei have been known to have a stronger effect on people's Sanity during a manifestation.",
     weakness: "Using Smudge Sticks on the Yurei will cause it to not wander around the location for ~90 seconds.",
   matches: 0
@@ -77,7 +81,7 @@ var yurei = {
 var wraith = {
   id: "#wraith",
   name: "Wraith",
-  evidence: ["Fingerprints", "Freezing Temps", "Spirit Box"],
+  evidence: [evidence[0], evidence[4], evidence[6]],
     strength: "Wraiths almost never touch the ground, but this does not apply to the ghost model. Because of this, footprint sounds from a Wraith will be rare to non-existent, and stepping in Salt will be less likely.",
     weakness: "Wraiths have a toxic reaction to Salt. If a Wraith comes into contact with a pile of salt, Ghost Activity will increase.",
   matches: 0
@@ -86,7 +90,7 @@ var wraith = {
 var jinn = {
   id: "#jinn",
   name: "Jinn",
-  evidence: ["EMF Level 5", "Ghost Orb", "Spirit Box"],
+  evidence: [evidence[0], evidence[3], evidence[5]],
     strength: "A Jinn will travel at a faster speed if its victim is far away.",
     weakness: "Turning off the location's power source will prevent the Jinn from using its ability.",
   matches: 0
@@ -95,7 +99,7 @@ var jinn = {
 var phantom = {
   id: "#phantom",
   name: "Phantom",
-  evidence: ["EMF Level 5", "Ghost Orb", "Freezing Temps"],
+  evidence: [evidence[4], evidence[3], evidence[6]],
     strength: "Looking at a Phantom will considerably drop your Sanity. This refers to any visible manifestations of the Phantom, including during a Hunt.",
     weakness: "Taking a photo of the Phantom will make it temporarily disappear. This, however, will not stop a Hunt.",
   matches: 0
@@ -104,7 +108,7 @@ var phantom = {
 var polt = {
   id: "#polt",
   name: "Poltergeist",
-  evidence: ["Ghost Orb", "Fingerprints", "Spirit Box", "Fingerprints"],
+  evidence: [evidence[4], evidence[3], evidence[2]],
     strength: "A Poltergeist is capable of influencing more objects at once than any other Ghosts, and is capable of shutting multiple doors at once.",
     weakness: "A Poltergeist is almost ineffective in an empty room.",
   matches: 0
@@ -113,7 +117,7 @@ var polt = {
 var shade = {
   id: "#shade",
   name: "Shade",
-  evidence: ["EMF Level 5", "Ghost Orb", "Ghost Writing"],
+  evidence: [evidence[0], evidence[2], evidence[5]],
     strength: "As a shy ghost, a Shade will rarely perform actions in the presence of two or more people, making it harder to detect.",
     weakness: "Conversely, a Shade will rarely start a Hunt when players are grouped together.",
   matches: 0
@@ -122,17 +126,16 @@ var shade = {
 var spirit = {
   id: "#spirit",
   name: "Spirit",
-  evidence: ["Ghost Writing", "Fingerprints", "Spirit Box"],
+  evidence: [evidence[0], evidence[4], evidence[2]],
     strength: "The spirit has no discernible strengths, however it is known to increase its hunting as your sanity drops.",
     weakness: "Using Smudge Sticks on a Spirit will stop it attacking for 180 seconds instead of 90.",
   matches: 0
 }
 
-// new ghosts! add them to array later
 var yokai = {
   id: "#yokai",
   name: "Yokai",
-  evidence: ["Spirit Box", "Ghost Orb", "Ghost Writing"],
+  evidence: [evidence[4], evidence[1], evidence[6]],
     strength: "Talking near a Yokai will anger it and cause it to attack more often.",
     weakness: "While hunting, it can only hear voices close to it.",
   matches: 0
@@ -141,14 +144,32 @@ var yokai = {
 var hantu = {
   id: "#hantu",
   name: "Hantu",
-  evidence: ["Ghost Orb", "Fingerprints", "Ghost Writing"],
+  evidence: [evidence[3], evidence[1], evidence[5]],
     strength: "A Hantu moves faster in colder areas.",
     weakness: "A Hantu moves slower in warmer areas.",
   matches: 0
 }
 
+var goryo = {
+  id: "#goryo",
+  name: "Goryo",
+  evidence: [evidence[0], evidence[3], evidence[6]],
+    strength: "A Goryo will usually only show itself on camera if there are no people nearby.",
+    weakness: "They are rarely seen far from their place of death.",
+  matches: 0
+}
+
+var myling = {
+  id: "#myling",
+  name: "Myling",
+  evidence: [evidence[0], evidence[3], evidence[2]],
+    strength: "A Myling is known to be quieter when hunting.",
+    weakness: "Mylings more frequently make paranormal sounds.",
+  matches: 0
+}
+
 // create array of ghosts!
-var ghosts = [banshee, demon, jinn, mare, oni, phantom, polt, revenant, shade, spirit, wraith, yurei, yokai, hantu];
+var ghosts = [banshee, demon, jinn, mare, oni, phantom, polt, revenant, shade, spirit, wraith, yurei, yokai, hantu, goryo, myling];
 
 
 // DEFINE FUNCTIONS
