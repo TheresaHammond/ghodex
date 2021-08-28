@@ -265,7 +265,7 @@ figcaption {
 /* Laptops, desktops, larger tablets, etc*/
 @media only screen and (min-width: 992px) {
     body {
-        background-image: url(images/bg_lg_expo.jpg);
+        background-image: url(images/bg_lg2.jpg);
         margin: auto;
     }
     
