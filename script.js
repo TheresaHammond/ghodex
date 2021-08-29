@@ -1,6 +1,6 @@
 /*
     Ghodex: A Phasmophobia Fanmade Journal App
-    Ver 3.0.0
+    Ver 3.0.1
     by Studio Searose
     script.js
 */

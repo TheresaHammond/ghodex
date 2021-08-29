@@ -1,6 +1,6 @@
 /*
     Ghodex: A Phasmophobia Fanmade Journal App
-    Ver 3.0.0
+    Ver 3.0.1
     by Studio Searose
     style.css
 /*
@@ -20,7 +20,7 @@
 
 html {
 	background-color: black;
-    background-image: linear-gradient(black, #006808);
+    background-image: linear-gradient(black, #410d0f);
     overflow-x: hidden; /* hide horizontal scrollbar */
 }
 
@@ -42,15 +42,15 @@ html, body, #wrapper {
 #wrapper {
     max-width: 100%;
     margin: auto;
-    min-width: 350px;
+    min-width: 250px;
     overflow: auto;
     scroll-behavior: smooth;
 }
 
 .button {
   border-radius: 10px;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin: 5px;
 }
 
@@ -58,8 +58,8 @@ html, body, #wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 80%;
-    margin-bottom: 40px;
+  width: 100%;
+    margin-bottom: 20px;
 }
 
 .button p {
@@ -78,11 +78,11 @@ figcaption {
 .button {
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 90px;
+    background-size: 70px;
     padding: 5px;
     opacity: 0.5; /* grayed out by default */
     border: 4px solid #111;
-    margin-bottom: 30px
+    margin-bottom: 45px
 }
 
 #fingerprints {
@@ -149,7 +149,7 @@ figcaption {
 }
 
 #results {
-  padding-top: 20px;
+  padding-top: 0px;
   padding-bottom: 10px;
 }
 
@@ -261,6 +261,22 @@ figcaption {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 *            RESPONSIVE DESIGN
 *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Larger phones, smaller tablets */
+@media only screen and (min-width: 600px) {
+    .button {
+      width: 100px;
+      height: 100px;
+    }
+    
+    .button {
+        background-size: 90px;
+    }
+    
+    #button_tray {
+        width: 80%;
+    }
+}
+
 
 /* Laptops, desktops, larger tablets, etc*/
 @media only screen and (min-width: 992px) {
