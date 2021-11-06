@@ -3,7 +3,7 @@ A fanmade Phasmophobia companion app.
 
 Author: Studio Searose
 
-Version: 2.1.3
+Version: 3.1.1
 
 LIVE SITE: https://studiosearose.com/ghodex/
 

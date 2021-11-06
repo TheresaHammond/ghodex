@@ -1,6 +1,6 @@
 /*
     Ghodex: A Phasmophobia Fanmade Journal App
-    Ver 3.0.1
+    Ver 3.1.1
     by Studio Searose
     script.js
 */
@@ -20,7 +20,8 @@ var time = 100; // fade animation time
 var wrapper = document.getElementById("wrapper");
 
 // EVIDENCE LIST
-var evidence = ["EMF Level 5", "Ghost Orb", "Ghost Writing",                             "Fingerprints", "Spirit Box", "Freezing Temps",
+var evidence = ["EMF Level 5", "Ghost Orb", "Ghost Writing",                             
+                "Fingerprints", "Spirit Box", "Freezing Temps",
                 "D.O.T.S. Projector"];
 
 // DEFINE GHOST OBJECTS (descriptions from the phasmophobia wiki)
@@ -168,8 +169,47 @@ var myling = {
   matches: 0
 }
 
+var onryo = {
+  id: "#onryo",
+  name: "Onryo",
+  evidence: [evidence[4], evidence[1], evidence[5]],
+    strength: "Extinguishing a flame can cause an Onryo to attack.",
+    weakness: "When threatened, this ghost will be less likely to attack.",
+  matches: 0
+}
+
+var raiju = {
+  id: "#raiju",
+  name: "Raiju",
+  evidence: [evidence[0], evidence[1], evidence[6]],
+    strength: "A Raiju can siphon power from nearby electrical devices, making it move faster.",
+    weakness: "Raiju are constantly disrupting electronic equipment, making it easier to track when attacking.",
+  matches: 0
+}
+
+var obake = {
+  id: "#obake",
+  name: "Obake",
+  evidence: [evidence[0], evidence[3], evidence[1]],
+    strength: "When interacting with the environment, an Obake will rarely leave a trace.",
+    weakness: "Sometimes this ghost will shapeshift, leaving behind unique evidence.",
+  matches: 0
+}
+
+var twins = {
+  id: "#twins",
+  name: "The Twins",
+  evidence: [evidence[0], evidence[4], evidence[5]],
+    strength: "Either Twin can be angered and initiate an attack on their prey.",
+    weakness: "The Twins will often interact with the environment at the same time.",
+  matches: 0
+}
+
 // create array of ghosts!
-var ghosts = [banshee, demon, jinn, mare, oni, phantom, polt, revenant, shade, spirit, wraith, yurei, yokai, hantu, goryo, myling];
+var ghosts = [banshee, demon, jinn, mare, oni, 
+              phantom, polt, revenant, shade, spirit, 
+              wraith, yurei, yokai, hantu, goryo, 
+              myling, onryo, raiju, obake, twins];
 
 
 // DEFINE FUNCTIONS
