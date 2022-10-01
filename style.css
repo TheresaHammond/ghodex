@@ -1,6 +1,6 @@
 /*
     Ghodex: A Phasmophobia Fanmade Journal App
-    Ver 3.1.1
+    Ver 4.0.0
     by Studio Searose
     style.css
 /*
@@ -10,11 +10,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Shadows+Into+Light&display=swap');
 
 * { /* all */
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  width: 100%;
-  margin: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    margin: auto;
     color: #111;
 }
 
@@ -48,17 +48,17 @@ html, body, #wrapper {
 }
 
 .button {
-  border-radius: 10px;
-  width: 80px;
-  height: 80px;
-  margin: 5px;
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
 }
 
 #button_tray {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -80,7 +80,7 @@ figcaption {
     background-position: center;
     background-size: 70px;
     padding: 5px;
-    opacity: 0.5; /* grayed out by default */
+    opacity: 0.25; /* grayed out by default */
     border: 4px solid #111;
     margin-bottom: 45px
 }
@@ -114,8 +114,8 @@ figcaption {
 }
 
 .crossed { /* evidence that's been matched */
-  text-decoration: line-through;
-    color: rgba(0, 0, 0, 0.5);
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.25);
 }
 
 .circled {
@@ -126,21 +126,21 @@ figcaption {
 }
 
 #header {
-  padding: 10px 0;
+    padding: 10px 0;
 }
 
 #display {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .ghost {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 #placeholder { /* shows when no ghost results */
-  display: none;
+    display: none;
 }
 
 #placeholder .description {
@@ -149,22 +149,22 @@ figcaption {
 }
 
 #results {
-  padding-top: 0px;
-  padding-bottom: 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
 }
 
 .ghost, #results, #placeholder { /* red line between entries */
-  border-bottom: 4px solid #111;
+    border-bottom: 4px solid #111;
 }
 
 .evidence1, .evidence2, .evidence3 {
      line-height: 45px;
 }
 
-.name, #header h1 {
-  font-size: 2.5em;
-  font-family: 'Shadows Into Light', cursive;
-  font-weight: bold;
+.name, #header h1, .attTitle {
+    font-size: 2.5em;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
 }
 
 .name {
@@ -209,9 +209,9 @@ figcaption {
     padding-top: 5px;
 }
 
-#footer {
-  font-size: 1.1em;
-  padding-bottom: 20px;
+#footer, #header span {
+    font-size: 1.1em;
+    padding-bottom: 20px;
     font-weight: bold;
 }
 
@@ -240,17 +240,13 @@ figcaption {
     opacity: 1;
 }
 
-#attLink { /* clickable to open attribute div */
-    text-decoration: underline;
-}
-
 #attributions {
     border-bottom: 4px solid #111;
     padding-bottom: 20px;
     display: none;
 }
 
-#attributions span {
+.attClick {
     text-decoration: underline;
 }
 
